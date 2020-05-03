@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+ <h1 class="text-center">
+                         Pegasus Invest
+ </h1>
+    <div class="section-top">
+        <div class="container">
+                <div class="row">
+                    <div class ="col-lg-12">
+
+                        {% for contribution in  home %}
+                        <img src="{% static 'img/fon.jpg' %}" class="img-responsive">
+                        {% endfor %}
+                    </div>
+                    <div class="description">
+                        <h2>Описание:</h2>
+                        <h4>                                                            </h4>
+                        <h4> При вложение в наших инвесторов, мы гарантируем высокий процент. </h4>
+                        <h4>                                                            </h4>
+                        <h4> Безопасность ваших денежных средств , а так же гарантируем быстрые выплаты.</h4>
+                        <h4>                                                            </h4>
+                        <h4> Депозит составляет 15% годовых.</h4>
+                    </div>
+                    <div class="button">
+                        <a href="{% url 'checkout' %}">
+                                <button class="btn btn-primary btn-lg" >Вложить</button>
+                        </a>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+{% endblock %}
